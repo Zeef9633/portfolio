@@ -30,3 +30,20 @@ function typeWriter() {
 
 typeWriter();
 
+
+// Open/Close Modal for Profile Picture
+const logo = document.getElementById('logo');
+const modal = document.getElementById('profile-modal');
+
+// Open modal when logo is clicked
+logo.addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
