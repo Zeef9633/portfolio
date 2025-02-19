@@ -14,7 +14,7 @@
     <header class="hero">
     <div id="particles-js"></div> <!-- Particles.js container -->
     <nav>
-        <div class="logo">ZK</div>
+        <div class="logo" id="logo">ZK</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -29,12 +29,13 @@
         <p class="animate__animated animate__fadeIn animate__delay-1s"></p>
         <div class="hero-buttons">
             <a href="#about" class="btn animate__animated animate__fadeIn animate__delay-2s">Explore My Work</a>
-            <a href="https://drive.google.com/file/d/1xAGvBrE0vYvWLP0jxEXPwz8O20sPT_RZ/view?usp=sharing" class="btn btn-outline animate__animated animate__fadeIn animate__delay-3s" target="_blank">
+            <a href="https://drive.google.com/your-resume-link" class="btn btn-outline animate__animated animate__fadeIn animate__delay-3s" target="_blank">
                 <i class="fas fa-download"></i> Download Resume
             </a>
         </div>
     </div>
 </header>
+
 
    
 
@@ -212,10 +213,20 @@
         <p>&copy; 2024 Zeeshan Khan. All rights reserved.</p>
     </div>
 </footer>
+
+<!-- Modal for Profile Picture -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <img src="profile.jpg" alt="Zeeshan Khan" class="profile-image">
+        </div>
+    </div>
+
+
+
  <!-- Other sections go here -->
 
-    <script src="particles.min.js"></script> <!-- Include Particles.js -->
-    <script src="app.js"></script> <!-- Your Particles.js configuration -->
+    <script src="js/particles.min.js"></script> <!-- Include Particles.js -->
+    <script src="js/app.js"></script> <!-- Your Particles.js configuration -->
     <script src="script.js"></script> <!-- Your existing JavaScript -->
 </body>
 </html>
