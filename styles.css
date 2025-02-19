@@ -159,27 +159,50 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.20); /* Blurred background */
-    backdrop-filter: blur(1px); /* Blur effect */
+    background: rgba(0, 0, 0, 0.8); /* Blurred background */
+    backdrop-filter: blur(10px); /* Blur effect */
     z-index: 1000; /* Above everything */
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background: white;
-    padding: 0rem;
-    border-radius: 100%; /* Round shape */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #1e1e2f; /* Dark background */
+    padding: 2rem;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 221, 87, 0.7); /* Glow effect */
+    text-align: center;
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .profile-image {
     width: 500px;
     height: 500px;
-    border-radius: 50%; /* Round image */
+    border-radius: 5%; /* Round image */
     object-fit: cover; /* Ensure the image fits */
+    border: 1px solid #ffdd57; /* Border color */
+    margin-bottom: 1rem;
 }
 
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    color: #ccc;
+}
 /* Logo Effect */
 .logo {
     cursor: pointer; /* Indicates the logo is clickable */
