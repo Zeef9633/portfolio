@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 <body>
     <!-- Hero Section with Particles.js -->
@@ -139,40 +140,59 @@
 </section>
 
     <section id="education" class="education-section">
-        <h2>Education</h2>
+    <h2>Education</h2>
+    <div class="education-grid">
         <div class="education-item">
+            <i class="fas fa-graduation-cap"></i> <!-- Icon for education -->
             <h3>Bachelor of Science in Computer Science</h3>
             <h4>University of Lahore, Pakistan</h4>
             <p>01/2012 - 12/2016</p>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Certification Section -->
     <section id="certification" class="certification-section">
-        <h2>Certifications</h2>
-		 <div class="certification-item">
-		 <div class="timeline-item animate__animated animate__fadeInRight">
+    <h2>Certifications</h2>
+    <div class="certification-grid">
+        <div class="certification-item">
+            <i class="fas fa-award"></i> <!-- Icon for certification -->
             <h3>Google Professional Workspace Administrator</h3>
             <p>Issued: 05/2023</p>
-            <h4>Provider: <a href="https://coursera.org/verify/JNDFJA8Z384G" target="_blank"> Coursera</a></h4>
+            <h4>Provider: <a href="https://coursera.org/verify/JNDFJA8Z384G" target="_blank"> Coursera </a> </h4>
         </div>
         <div class="certification-item">
-		<div class="timeline-item animate__animated animate__fadeInRight">
+            <i class="fas fa-shield-alt"></i> <!-- Icon for cybersecurity -->
             <h3>Introduction to Cyber Security</h3>
             <p>Issued: 12/2023</p>
             <h4>Provider: <a href="https://www.open.edu/openlearn/badges/badge.php?hash=ec56e171cf3220fc0f10c6d1188c44f0c0962329" target="_blank"> The Open University </a> </h4>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contact" class="contact-section">
+    <!-- Contact Me Button -->
+<section id="contact">
+    <button id="contact-btn" class="btn">Contact Me</button>
+</section>
+
+<!-- Contact Form Modal -->
+
+
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span> <!-- Close button -->
         <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+       
+	   <form id="contact-form" action="https://formspree.io/f/xpwqbzyj" method="POST">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+    </div>
+	
+	
+</div>
 
     <!-- Footer Section -->
 <footer>
@@ -186,12 +206,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/yourusername" target="_blank">
-                        <i class="fab fa-twitter"></i>
+                    <a href="https://x.com/Z33ef" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/yourusername" target="_blank">
+                    <a href="https://github.com/Zeef9633" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
                 </li>
@@ -210,19 +230,27 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 Zeeshan Khan. All rights reserved.</p>
+        <p>&copy; 2025 Zeeshan Khan. All rights reserved.</p>
     </div>
 </footer>
 
 <!-- Modal for Profile Picture -->
-    <div id="profile-modal" class="modal">
+
+<div id="profile-modal" class="modal">
     <div class="modal-content">
-        <img src="profile.jpg" alt="Zeeshan Khan" class="profile-image">
-        <h3>Zeeshan Khan</h3>
-        <p>IT Support & Cloud Services Specialist</p>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="profile.jpg" alt="Zeeshan Khan" class="profile-image">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Zeeshan Khan</h3>
+                    <p>IT Support & Cloud Services Specialist</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 
 
  <!-- Other sections go here -->
