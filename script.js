@@ -80,6 +80,11 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const form = e.target;
     const formData = new FormData(form);
 
+    // Log form data for debugging
+    for (let [key, value] of formData.entries()) {
+        console.log(key, value);
+    }
+
     fetch(form.action, {
         method: 'POST',
         body: formData,
@@ -93,10 +98,14 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
             form.reset(); // Clear the form
             contactModal.style.display = 'none'; // Close the modal
         } else {
-            alert('Oops! Something went wrong. Please try again.');
+            return response.json().then(data => {
+                console.error('Form submission error:', data); // Log the error
+                alert('Oops! Something went wrong. Please try again.');
+            });
         }
     })
     .catch(error => {
+        console.error('Fetch error:', error); // Log the fetch error
         alert('Oops! Something went wrong. Please try again.');
     });
 });
